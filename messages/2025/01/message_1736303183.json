@@ -1,0 +1,9 @@
+{
+  "content": "Test message created at 2025-01-07T21:26:23.169003",
+  "author": "Test Suite",
+  "metadata": {
+    "test_run": true,
+    "type": "integration_test"
+  },
+  "timestamp": "2025-01-07T21:26:23.169075"
+}
