@@ -16,9 +16,18 @@ class GitHubManager:
     
     def __init__(self):
         """Initialize GitHub manager with credentials from environment variables."""
-        load_dotenv()
+        # Get the absolute path to the .env file
+        env_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env')
+        print(f"Looking for .env file at: {env_path}")
+        
+        # Load environment variables from .env file
+        load_dotenv(dotenv_path=env_path)
+        
         self.token = os.getenv('GITHUB_TOKEN')
         self.repo_name = os.getenv('GITHUB_REPO')
+        
+        print(f"Current working directory: {os.getcwd()}")
+        print(f"Environment variables loaded - Token: {'Present' if self.token else 'Missing'}, Repo: {self.repo_name if self.repo_name else 'Missing'}")
         
         if not self.token or not self.repo_name:
             raise ValueError("GitHub token and repository name must be set in .env file")

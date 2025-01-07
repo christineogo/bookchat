@@ -12,7 +12,7 @@ A simple web-based messaging application that uses Git as a backend storage syst
 
 ## Prerequisites
 
-- Python 3.8 or higher
+- Python 3.8 or higher (make sure to use `python3` command or the appropriate Python 3 executable)
 - Git installed and configured
 - GitHub account with personal access token
 - SQLite3
