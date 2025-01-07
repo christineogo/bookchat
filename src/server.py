@@ -93,7 +93,7 @@ class MessageHandler(http.server.SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(response)
 
-def run_server(port: int = 8080) -> None:
+def run_server(port: int = 8081) -> None:
     """Run the HTTP server on the specified port."""
     with socketserver.TCPServer(("", port), MessageHandler) as httpd:
         print(f"Server running on port {port}")
